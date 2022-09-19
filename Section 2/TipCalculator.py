@@ -9,7 +9,9 @@
 bill = float(input("What is the total bill? "))
 how_many_people = int(input("How many people are splitting the bill "))
 what_is_the_tip_percentage = int(input("What is the tip percentage? 10, 12, 15 "))
-total_bill=what_is_the_tip_percentage/100*bill+bill
-actualBillAfterSplitting = (what_is_the_tip_percentage/100*bill+bill)/how_many_people
-print(str(actualBillAfterSplitting) + "$ each has to pay")
+total_bill = what_is_the_tip_percentage / 100 * bill + bill
+actualBillAfterSplitting = (what_is_the_tip_percentage / 100 * bill + bill) / how_many_people
+#final_amount = round(actualBillAfterSplitting, 2)
+final_amount = "{:.2f}".format(actualBillAfterSplitting)
+print(str(final_amount) + "$ each has to pay")
 print(str(total_bill) + "$ is a total bill")
