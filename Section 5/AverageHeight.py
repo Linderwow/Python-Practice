@@ -18,3 +18,15 @@ for students in student_heights:
 print(str(number_of_students) + " students")
 average_height = round(total_height / number_of_students)
 print(str(average_height) + " is an average height")
+# --------------------------------
+min_height = student_heights[0]
+for height in student_heights:
+    if height < min_height:
+        min_height = height
+print(f"{min_height} is a min height")
+# -------------------------------
+max_height = 0
+for height in student_heights:
+    if height > max_height:
+        max_height = height
+print(f"{max_height} is a max height")
