@@ -21,10 +21,11 @@ for char in range(1, nr_symbols + 1):
     password_list.append(random.choice(symbols))
 for char in range(1, nr_numbers + 1):
     password_list.append(random.choice(numbers))
+    # Hard Level - Order of characters randomised:
+# e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 random.shuffle(password_list)
 password = ""
 for each in password_list:
     password += each
 print(str(len(password)) + str(" is a password length"))
-# Hard Level - Order of characters randomised:
-# e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+#
