@@ -25,25 +25,21 @@ def encrypt(plain_text, shift_amount, cipher_text):
     print(f"The encoded test is {cipher_text}")
 
 
-def decrypt(c_text,shift_amount):
+def decrypt(c_text, shift_amount):
+    plain_text = ""
     for letter in c_text:
-        if alphabet.index(letter) + shift_amount > len(alphabet):
-            alphabet.reverse()
-            position = alphabet.index(letter)
-            new_position = position + shift_amount
-            new_letter = alphabet[new_position]
-            c_text += new_letter
-        else:
-            position = alphabet.index(letter)
-            new_position = position + shift_amount
-            new_letter = alphabet[new_position]
-            c_text += new_letter
-    print(f"The decoded test is {c_text}")
+        position = alphabet.index(letter)
+        new_position = position - shift_amount
+        new_letter = alphabet[new_position]
+        plain_text += new_letter
 
 
+    print(f"The decoded test is {plain_text}")
 
-    decrypt(c_text=cipher_text, shift_amount=shift)
-encrypt(plain_text=text, shift_amount=shift, cipher_text=cipher_text)
+if direction == "encode":
+    encrypt(plain_text=text, shift_amount=shift, cipher_text=cipher_text)
+elif direction == "decode":
+    decrypt(c_text=text, shift_amount=shift)
 # TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.
 # e.g.
 # plain_text = "hello"
