@@ -38,7 +38,7 @@ def decrypt(c_text,shift_amount):
             new_position = position + shift_amount
             new_letter = alphabet[new_position]
             c_text += new_letter
-    print(f"The encoded test is {c_text}")
+    print(f"The decoded test is {c_text}")
 
 
 
